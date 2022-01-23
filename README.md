@@ -10,7 +10,7 @@ It contains scripts to automatically generate a model index in ESM format from t
 
 - deno
 
-##### Generate KTX2 textures and index
+##### Generate index
 
 ```
 deno run -A --unstable generate.js
