@@ -1,6 +1,6 @@
 /** Revelry Engine Sample Models **/
-const BASE_KHRONOS_SAMPLE_URL        = 'https://raw.githubusercontent.com/KhronosGroup/glTF-Sample-Models/8fc9a9a/2.0/';
-const BASE_KHRONOS_SAMPLE_SOURCE_URL = 'https://github.com/KhronosGroup/glTF-Sample-Models/tree/8fc9a9a/2.0/';
+const BASE_KHRONOS_SAMPLE_URL        = 'https://raw.githubusercontent.com/KhronosGroup/glTF-Sample-Models/768abe4/2.0/';
+const BASE_KHRONOS_SAMPLE_SOURCE_URL = 'https://github.com/KhronosGroup/glTF-Sample-Models/tree/768abe4/2.0/';
 const BASE_SAMPLE_SOURCE_URL         = 'https://github.com/revelryengine/sample-models/tree/main/';
 
 function link(path, root = import.meta.url) { return new URL(path, root).toString(); }
@@ -328,6 +328,16 @@ export default [
             'glTF-Draco': link('./Duck/glTF-Draco/Duck.gltf', BASE_KHRONOS_SAMPLE_URL),
             'glTF-Embedded': link('./Duck/glTF-Embedded/Duck.gltf', BASE_KHRONOS_SAMPLE_URL),
             'glTF-Quantized': link('./Duck/glTF-Quantized/Duck.gltf', BASE_KHRONOS_SAMPLE_URL),
+        },
+    },
+    { 
+        name: 'EmissiveStrengthTest',
+        group: 'Khronos',
+        screenshot: link('./EmissiveStrengthTest/screenshot/screenshot.jpg', BASE_KHRONOS_SAMPLE_URL),
+        source: link('./EmissiveStrengthTest', BASE_KHRONOS_SAMPLE_SOURCE_URL),
+        variants: {
+            'glTF': link('./EmissiveStrengthTest/glTF/EmissiveStrengthTest.gltf', BASE_KHRONOS_SAMPLE_URL),
+            'glTF-Binary': link('./EmissiveStrengthTest/glTF-Binary/EmissiveStrengthTest.glb', BASE_KHRONOS_SAMPLE_URL),
         },
     },
     { 
