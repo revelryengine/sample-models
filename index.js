@@ -1,6 +1,6 @@
 /** Revelry Engine Sample Models **/
-const BASE_KHRONOS_SAMPLE_URL        = 'https://raw.githubusercontent.com/KhronosGroup/glTF-Sample-Models/768abe4/2.0/';
-const BASE_KHRONOS_SAMPLE_SOURCE_URL = 'https://github.com/KhronosGroup/glTF-Sample-Models/tree/768abe4/2.0/';
+const BASE_KHRONOS_SAMPLE_URL        = 'https://raw.githubusercontent.com/KhronosGroup/glTF-Sample-Models/16e8034/2.0/';
+const BASE_KHRONOS_SAMPLE_SOURCE_URL = 'https://github.com/KhronosGroup/glTF-Sample-Models/tree/16e8034/2.0/';
 const BASE_SAMPLE_SOURCE_URL         = 'https://github.com/revelryengine/sample-models/tree/main/';
 
 function link(path, root = import.meta.url) { return new URL(path, root).toString(); }
@@ -343,7 +343,7 @@ export default [
     { 
         name: 'EnvironmentTest',
         group: 'Khronos',
-        screenshot: link('./EnvironmentTest/screenshot/screenshot.png', BASE_KHRONOS_SAMPLE_URL),
+        screenshot: link('./EnvironmentTest/screenshot/screenshot.jpg', BASE_KHRONOS_SAMPLE_URL),
         source: link('./EnvironmentTest', BASE_KHRONOS_SAMPLE_SOURCE_URL),
         variants: {
             'glTF': link('./EnvironmentTest/glTF/EnvironmentTest.gltf', BASE_KHRONOS_SAMPLE_URL),
@@ -367,7 +367,6 @@ export default [
         variants: {
             'glTF': link('./Fox/glTF/Fox.gltf', BASE_KHRONOS_SAMPLE_URL),
             'glTF-Binary': link('./Fox/glTF-Binary/Fox.glb', BASE_KHRONOS_SAMPLE_URL),
-            'glTF-Embedded': link('./Fox/glTF-Embedded/Fox.gltf', BASE_KHRONOS_SAMPLE_URL),
         },
     },
     { 
@@ -403,6 +402,44 @@ export default [
         },
     },
     { 
+        name: 'IridescenceDielectricSpheres',
+        group: 'Khronos',
+        screenshot: link('./IridescenceDielectricSpheres/screenshot/screenshot.jpg', BASE_KHRONOS_SAMPLE_URL),
+        source: link('./IridescenceDielectricSpheres', BASE_KHRONOS_SAMPLE_SOURCE_URL),
+        variants: {
+            'glTF': link('./IridescenceDielectricSpheres/glTF/IridescenceDielectricSpheres.gltf', BASE_KHRONOS_SAMPLE_URL),
+        },
+    },
+    { 
+        name: 'IridescenceLamp',
+        group: 'Khronos',
+        screenshot: link('./IridescenceLamp/screenshot/screenshot.jpg', BASE_KHRONOS_SAMPLE_URL),
+        source: link('./IridescenceLamp', BASE_KHRONOS_SAMPLE_SOURCE_URL),
+        variants: {
+            'glTF': link('./IridescenceLamp/glTF/IridescenceLamp.gltf', BASE_KHRONOS_SAMPLE_URL),
+            'glTF-Binary': link('./IridescenceLamp/glTF-Binary/IridescenceLamp.glb', BASE_KHRONOS_SAMPLE_URL),
+        },
+    },
+    { 
+        name: 'IridescenceMetallicSpheres',
+        group: 'Khronos',
+        screenshot: link('./IridescenceMetallicSpheres/screenshot/screenshot.jpg', BASE_KHRONOS_SAMPLE_URL),
+        source: link('./IridescenceMetallicSpheres', BASE_KHRONOS_SAMPLE_SOURCE_URL),
+        variants: {
+            'glTF': link('./IridescenceMetallicSpheres/glTF/IridescenceMetallicSpheres.gltf', BASE_KHRONOS_SAMPLE_URL),
+        },
+    },
+    { 
+        name: 'IridescenceSuzanne',
+        group: 'Khronos',
+        screenshot: link('./IridescenceSuzanne/screenshot/screenshot.jpg', BASE_KHRONOS_SAMPLE_URL),
+        source: link('./IridescenceSuzanne', BASE_KHRONOS_SAMPLE_SOURCE_URL),
+        variants: {
+            'glTF': link('./IridescenceSuzanne/glTF/IridescenceSuzanne.gltf', BASE_KHRONOS_SAMPLE_URL),
+            'glTF-Binary': link('./IridescenceSuzanne/glTF-Binary/IridescenceSuzanne.glb', BASE_KHRONOS_SAMPLE_URL),
+        },
+    },
+    { 
         name: 'IridescentDishWithOlives',
         group: 'Khronos',
         screenshot: link('./IridescentDishWithOlives/screenshot/screenshot.jpg', BASE_KHRONOS_SAMPLE_URL),
@@ -422,6 +459,16 @@ export default [
             'glTF-Binary': link('./Lantern/glTF-Binary/Lantern.glb', BASE_KHRONOS_SAMPLE_URL),
             'glTF-Draco': link('./Lantern/glTF-Draco/Lantern.gltf', BASE_KHRONOS_SAMPLE_URL),
             'glTF-Quantized': link('./Lantern/glTF-Quantized/Lantern.gltf', BASE_KHRONOS_SAMPLE_URL),
+        },
+    },
+    { 
+        name: 'LightsPunctualLamp',
+        group: 'Khronos',
+        screenshot: link('./LightsPunctualLamp/screenshot/screenshot.png', BASE_KHRONOS_SAMPLE_URL),
+        source: link('./LightsPunctualLamp', BASE_KHRONOS_SAMPLE_SOURCE_URL),
+        variants: {
+            'glTF': link('./LightsPunctualLamp/glTF/LightsPunctualLamp.gltf', BASE_KHRONOS_SAMPLE_URL),
+            'glTF-Binary': link('./LightsPunctualLamp/glTF-Binary/LightsPunctualLamp.glb', BASE_KHRONOS_SAMPLE_URL),
         },
     },
     { 
@@ -811,6 +858,16 @@ export default [
         source: link('./TwoSidedPlane', BASE_KHRONOS_SAMPLE_SOURCE_URL),
         variants: {
             'glTF': link('./TwoSidedPlane/glTF/TwoSidedPlane.gltf', BASE_KHRONOS_SAMPLE_URL),
+        },
+    },
+    { 
+        name: 'Unicode❤♻Test',
+        group: 'Khronos',
+        screenshot: link('./Unicode❤♻Test/screenshot/screenshot.png', BASE_KHRONOS_SAMPLE_URL),
+        source: link('./Unicode❤♻Test', BASE_KHRONOS_SAMPLE_SOURCE_URL),
+        variants: {
+            'glTF': link('./Unicode❤♻Test/glTF/Unicode❤♻Test.gltf', BASE_KHRONOS_SAMPLE_URL),
+            'glTF-Binary': link('./Unicode❤♻Test/glTF-Binary/Unicode❤♻Test.glb', BASE_KHRONOS_SAMPLE_URL),
         },
     },
     { 
