@@ -1,6 +1,6 @@
 /** Revelry Engine Sample Models **/
-const BASE_KHRONOS_SAMPLE_URL        = 'https://raw.githubusercontent.com/KhronosGroup/glTF-Sample-Models/16e8034/2.0/';
-const BASE_KHRONOS_SAMPLE_SOURCE_URL = 'https://github.com/KhronosGroup/glTF-Sample-Models/tree/16e8034/2.0/';
+const BASE_KHRONOS_SAMPLE_URL        = 'https://raw.githubusercontent.com/KhronosGroup/glTF-Sample-Models/8e9a5a6/2.0/';
+const BASE_KHRONOS_SAMPLE_SOURCE_URL = 'https://github.com/KhronosGroup/glTF-Sample-Models/tree/8e9a5a6/2.0/';
 const BASE_SAMPLE_SOURCE_URL         = 'https://github.com/revelryengine/sample-models/tree/main/';
 
 function link(path, root = import.meta.url) { return new URL(path, root).toString(); }
@@ -16,6 +16,15 @@ export default [
             'glTF-Binary': link('./2CylinderEngine/glTF-Binary/2CylinderEngine.glb', BASE_KHRONOS_SAMPLE_URL),
             'glTF-Draco': link('./2CylinderEngine/glTF-Draco/2CylinderEngine.gltf', BASE_KHRONOS_SAMPLE_URL),
             'glTF-Embedded': link('./2CylinderEngine/glTF-Embedded/2CylinderEngine.gltf', BASE_KHRONOS_SAMPLE_URL),
+        },
+    },
+    { 
+        name: 'ABeautifulGame',
+        group: 'Khronos',
+        screenshot: link('./ABeautifulGame/screenshot/screenshot.jpg', BASE_KHRONOS_SAMPLE_URL),
+        source: link('./ABeautifulGame', BASE_KHRONOS_SAMPLE_SOURCE_URL),
+        variants: {
+            'glTF': link('./ABeautifulGame/glTF/ABeautifulGame.gltf', BASE_KHRONOS_SAMPLE_URL),
         },
     },
     { 

@@ -1,7 +1,7 @@
 import { expandGlobSync } from "https://deno.land/std/fs/mod.ts";
 
-const BASE_KHRONOS_SAMPLE_URL        = 'https://raw.githubusercontent.com/KhronosGroup/glTF-Sample-Models/16e8034/2.0/';
-const BASE_KHRONOS_SAMPLE_SOURCE_URL = 'https://github.com/KhronosGroup/glTF-Sample-Models/tree/16e8034/2.0/';
+const BASE_KHRONOS_SAMPLE_URL        = 'https://raw.githubusercontent.com/KhronosGroup/glTF-Sample-Models/8e9a5a6/2.0/';
+const BASE_KHRONOS_SAMPLE_SOURCE_URL = 'https://github.com/KhronosGroup/glTF-Sample-Models/tree/8e9a5a6/2.0/';
 const BASE_SAMPLE_SOURCE_URL         = 'https://github.com/revelryengine/sample-models/tree/main/';
 
 const khronosIndex = await fetch(`${BASE_KHRONOS_SAMPLE_URL}/model-index.json`).then(res => res.json());
@@ -65,10 +65,3 @@ ${Object.entries(variants).map(([name, variant]) =>
 ];`;
 
 await Deno.writeTextFile(`./index.js`, index);
-
-
-
-
-
-
-
