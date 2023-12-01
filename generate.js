@@ -1,7 +1,7 @@
 import { expandGlobSync } from "https://deno.land/std/fs/mod.ts";
 
-const BASE_KHRONOS_SAMPLE_URL        = 'https://raw.githubusercontent.com/KhronosGroup/glTF-Sample-Models/8e9a5a6/2.0/';
-const BASE_KHRONOS_SAMPLE_SOURCE_URL = 'https://github.com/KhronosGroup/glTF-Sample-Models/tree/8e9a5a6/2.0/';
+const BASE_KHRONOS_SAMPLE_URL        = 'https://raw.githubusercontent.com/KhronosGroup/glTF-Sample-Models/4ca0667/2.0/';
+const BASE_KHRONOS_SAMPLE_SOURCE_URL = 'https://github.com/KhronosGroup/glTF-Sample-Models/tree/4ca0667/2.0/';
 const BASE_SAMPLE_SOURCE_URL         = 'https://github.com/revelryengine/sample-models/tree/main/';
 
 const khronosIndex = await fetch(`${BASE_KHRONOS_SAMPLE_URL}/model-index.json`).then(res => res.json());
@@ -39,26 +39,26 @@ const BASE_SAMPLE_SOURCE_URL         = '${BASE_SAMPLE_SOURCE_URL}';
 
 function link(path, root = import.meta.url) { return new URL(path, root).toString(); }
 
-export default [
-${khronosSamples.map(({ name, screenshot, source, variants }) => 
-`    { 
+export const index = [
+${khronosSamples.map(({ name, screenshot, source, variants }) =>
+`    {
         name: '${name}',
         group: 'Khronos',
         screenshot: link('${screenshot}', BASE_KHRONOS_SAMPLE_URL),
         source: link('${source}', BASE_KHRONOS_SAMPLE_SOURCE_URL),
         variants: {
-${Object.entries(variants).map(([name, variant]) => 
+${Object.entries(variants).map(([name, variant]) =>
 `            '${name}': link('${variant}', BASE_KHRONOS_SAMPLE_URL),`).join('\n')}
         },
     },`).join('\n')}
-${samples.map(({ name, screenshot, source, variants }) => 
-`    { 
+${samples.map(({ name, screenshot, source, variants }) =>
+`    {
         name: '${name}',
         group: 'Revelry Engine',
         screenshot: ${screenshot ? `link('${screenshot}')`: 'undefined'},
         source: link('${source}', BASE_SAMPLE_SOURCE_URL),
         variants: {
-${Object.entries(variants).map(([name, variant]) => 
+${Object.entries(variants).map(([name, variant]) =>
 `            '${name}': link('${variant}'),`).join('\n')}
         },
     },`).join('\n')}
