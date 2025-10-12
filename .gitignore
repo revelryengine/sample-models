@@ -1,2 +1,4 @@
 *.bak
 *.blend*
+vendor
+lib.deno.d.ts

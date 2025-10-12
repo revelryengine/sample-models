@@ -1,23 +1,11 @@
 /** Revelry Engine Sample Models **/
-const BASE_KHRONOS_SAMPLE_URL        = 'https://raw.githubusercontent.com/KhronosGroup/glTF-Sample-Models/4ca0667/2.0/';
-const BASE_KHRONOS_SAMPLE_SOURCE_URL = 'https://github.com/KhronosGroup/glTF-Sample-Models/tree/4ca0667/2.0/';
+const BASE_KHRONOS_SAMPLE_URL        = 'https://raw.githubusercontent.com/KhronosGroup/glTF-Sample-Assets/e72fc5d/Models/';
+const BASE_KHRONOS_SAMPLE_SOURCE_URL = 'https://github.com/KhronosGroup/glTF-Sample-Assets/tree/e72fc5d/Models/';
 const BASE_SAMPLE_SOURCE_URL         = 'https://github.com/revelryengine/sample-models/tree/main/';
 
-function link(path, root = import.meta.url) { return new URL(path, root).toString(); }
+function link(/** @type {string} */path, root = import.meta.url) { return new URL(path, root).toString(); }
 
 export const index = [
-    {
-        name: '2CylinderEngine',
-        group: 'Khronos',
-        screenshot: link('./2CylinderEngine/screenshot/screenshot.png', BASE_KHRONOS_SAMPLE_URL),
-        source: link('./2CylinderEngine', BASE_KHRONOS_SAMPLE_SOURCE_URL),
-        variants: {
-            'glTF': link('./2CylinderEngine/glTF/2CylinderEngine.gltf', BASE_KHRONOS_SAMPLE_URL),
-            'glTF-Binary': link('./2CylinderEngine/glTF-Binary/2CylinderEngine.glb', BASE_KHRONOS_SAMPLE_URL),
-            'glTF-Draco': link('./2CylinderEngine/glTF-Draco/2CylinderEngine.gltf', BASE_KHRONOS_SAMPLE_URL),
-            'glTF-Embedded': link('./2CylinderEngine/glTF-Embedded/2CylinderEngine.gltf', BASE_KHRONOS_SAMPLE_URL),
-        },
-    },
     {
         name: 'ABeautifulGame',
         group: 'Khronos',
@@ -25,6 +13,8 @@ export const index = [
         source: link('./ABeautifulGame', BASE_KHRONOS_SAMPLE_SOURCE_URL),
         variants: {
             'glTF': link('./ABeautifulGame/glTF/ABeautifulGame.gltf', BASE_KHRONOS_SAMPLE_URL),
+            'glTF-Binary': link('./ABeautifulGame/glTF-Binary/ABeautifulGame.glb', BASE_KHRONOS_SAMPLE_URL),
+            'glTF-Binary-KTX-ETC1S-Draco': link('./ABeautifulGame/glTF-Binary-KTX-ETC1S-Draco/ABeautifulGame.glb', BASE_KHRONOS_SAMPLE_URL),
         },
     },
     {
@@ -35,7 +25,16 @@ export const index = [
         variants: {
             'glTF': link('./AlphaBlendModeTest/glTF/AlphaBlendModeTest.gltf', BASE_KHRONOS_SAMPLE_URL),
             'glTF-Binary': link('./AlphaBlendModeTest/glTF-Binary/AlphaBlendModeTest.glb', BASE_KHRONOS_SAMPLE_URL),
-            'glTF-Embedded': link('./AlphaBlendModeTest/glTF-Embedded/AlphaBlendModeTest.gltf', BASE_KHRONOS_SAMPLE_URL),
+        },
+    },
+    {
+        name: 'AnimatedColorsCube',
+        group: 'Khronos',
+        screenshot: link('./AnimatedColorsCube/screenshot/screenshot.gif', BASE_KHRONOS_SAMPLE_URL),
+        source: link('./AnimatedColorsCube', BASE_KHRONOS_SAMPLE_SOURCE_URL),
+        variants: {
+            'glTF': link('./AnimatedColorsCube/glTF/AnimatedColorsCube.gltf', BASE_KHRONOS_SAMPLE_URL),
+            'glTF-Binary': link('./AnimatedColorsCube/glTF-Binary/AnimatedColorsCube.glb', BASE_KHRONOS_SAMPLE_URL),
         },
     },
     {
@@ -59,16 +58,6 @@ export const index = [
         },
     },
     {
-        name: 'AnimatedMorphSphere',
-        group: 'Khronos',
-        screenshot: link('./AnimatedMorphSphere/screenshot/screenshot.gif', BASE_KHRONOS_SAMPLE_URL),
-        source: link('./AnimatedMorphSphere', BASE_KHRONOS_SAMPLE_SOURCE_URL),
-        variants: {
-            'glTF': link('./AnimatedMorphSphere/glTF/AnimatedMorphSphere.gltf', BASE_KHRONOS_SAMPLE_URL),
-            'glTF-Binary': link('./AnimatedMorphSphere/glTF-Binary/AnimatedMorphSphere.glb', BASE_KHRONOS_SAMPLE_URL),
-        },
-    },
-    {
         name: 'AnimatedTriangle',
         group: 'Khronos',
         screenshot: link('./AnimatedTriangle/screenshot/screenshot.gif', BASE_KHRONOS_SAMPLE_URL),
@@ -79,9 +68,60 @@ export const index = [
         },
     },
     {
+        name: 'AnimationPointerUVs',
+        group: 'Khronos',
+        screenshot: link('./AnimationPointerUVs/screenshot/screenshot.jpg', BASE_KHRONOS_SAMPLE_URL),
+        source: link('./AnimationPointerUVs', BASE_KHRONOS_SAMPLE_SOURCE_URL),
+        variants: {
+            'glTF': link('./AnimationPointerUVs/glTF/AnimationPointerUVs.gltf', BASE_KHRONOS_SAMPLE_URL),
+            'glTF-Binary': link('./AnimationPointerUVs/glTF-Binary/AnimationPointerUVs.glb', BASE_KHRONOS_SAMPLE_URL),
+        },
+    },
+    {
+        name: 'AnisotropyBarnLamp',
+        group: 'Khronos',
+        screenshot: link('./AnisotropyBarnLamp/screenshot/screenshot.jpg', BASE_KHRONOS_SAMPLE_URL),
+        source: link('./AnisotropyBarnLamp', BASE_KHRONOS_SAMPLE_SOURCE_URL),
+        variants: {
+            'glTF': link('./AnisotropyBarnLamp/glTF/AnisotropyBarnLamp.gltf', BASE_KHRONOS_SAMPLE_URL),
+            'glTF-Binary': link('./AnisotropyBarnLamp/glTF-Binary/AnisotropyBarnLamp.glb', BASE_KHRONOS_SAMPLE_URL),
+            'glTF-KTX-BasisU': link('./AnisotropyBarnLamp/glTF-KTX-BasisU/AnisotropyBarnLamp.gltf', BASE_KHRONOS_SAMPLE_URL),
+        },
+    },
+    {
+        name: 'AnisotropyDiscTest',
+        group: 'Khronos',
+        screenshot: link('./AnisotropyDiscTest/screenshot/screenshot.jpg', BASE_KHRONOS_SAMPLE_URL),
+        source: link('./AnisotropyDiscTest', BASE_KHRONOS_SAMPLE_SOURCE_URL),
+        variants: {
+            'glTF': link('./AnisotropyDiscTest/glTF/AnisotropyDiscTest.gltf', BASE_KHRONOS_SAMPLE_URL),
+            'glTF-Binary': link('./AnisotropyDiscTest/glTF-Binary/AnisotropyDiscTest.glb', BASE_KHRONOS_SAMPLE_URL),
+        },
+    },
+    {
+        name: 'AnisotropyRotationTest',
+        group: 'Khronos',
+        screenshot: link('./AnisotropyRotationTest/screenshot/screenshot.png', BASE_KHRONOS_SAMPLE_URL),
+        source: link('./AnisotropyRotationTest', BASE_KHRONOS_SAMPLE_SOURCE_URL),
+        variants: {
+            'glTF': link('./AnisotropyRotationTest/glTF/AnisotropyRotationTest.gltf', BASE_KHRONOS_SAMPLE_URL),
+            'glTF-Binary': link('./AnisotropyRotationTest/glTF-Binary/AnisotropyRotationTest.glb', BASE_KHRONOS_SAMPLE_URL),
+        },
+    },
+    {
+        name: 'AnisotropyStrengthTest',
+        group: 'Khronos',
+        screenshot: link('./AnisotropyStrengthTest/screenshot/screenshot.png', BASE_KHRONOS_SAMPLE_URL),
+        source: link('./AnisotropyStrengthTest', BASE_KHRONOS_SAMPLE_SOURCE_URL),
+        variants: {
+            'glTF': link('./AnisotropyStrengthTest/glTF/AnisotropyStrengthTest.gltf', BASE_KHRONOS_SAMPLE_URL),
+            'glTF-Binary': link('./AnisotropyStrengthTest/glTF-Binary/AnisotropyStrengthTest.glb', BASE_KHRONOS_SAMPLE_URL),
+        },
+    },
+    {
         name: 'AntiqueCamera',
         group: 'Khronos',
-        screenshot: link('./AntiqueCamera/screenshot/screenshot.png', BASE_KHRONOS_SAMPLE_URL),
+        screenshot: link('./AntiqueCamera/screenshot/screenshot.jpg', BASE_KHRONOS_SAMPLE_URL),
         source: link('./AntiqueCamera', BASE_KHRONOS_SAMPLE_SOURCE_URL),
         variants: {
             'glTF': link('./AntiqueCamera/glTF/AntiqueCamera.gltf', BASE_KHRONOS_SAMPLE_URL),
@@ -231,18 +271,6 @@ export const index = [
         },
     },
     {
-        name: 'Buggy',
-        group: 'Khronos',
-        screenshot: link('./Buggy/screenshot/screenshot.png', BASE_KHRONOS_SAMPLE_URL),
-        source: link('./Buggy', BASE_KHRONOS_SAMPLE_SOURCE_URL),
-        variants: {
-            'glTF': link('./Buggy/glTF/Buggy.gltf', BASE_KHRONOS_SAMPLE_URL),
-            'glTF-Binary': link('./Buggy/glTF-Binary/Buggy.glb', BASE_KHRONOS_SAMPLE_URL),
-            'glTF-Draco': link('./Buggy/glTF-Draco/Buggy.gltf', BASE_KHRONOS_SAMPLE_URL),
-            'glTF-Embedded': link('./Buggy/glTF-Embedded/Buggy.gltf', BASE_KHRONOS_SAMPLE_URL),
-        },
-    },
-    {
         name: 'Cameras',
         group: 'Khronos',
         screenshot: link('./Cameras/screenshot/screenshot.png', BASE_KHRONOS_SAMPLE_URL),
@@ -250,6 +278,29 @@ export const index = [
         variants: {
             'glTF': link('./Cameras/glTF/Cameras.gltf', BASE_KHRONOS_SAMPLE_URL),
             'glTF-Embedded': link('./Cameras/glTF-Embedded/Cameras.gltf', BASE_KHRONOS_SAMPLE_URL),
+        },
+    },
+    {
+        name: 'CarConcept',
+        group: 'Khronos',
+        screenshot: link('./CarConcept/screenshot/screenshot.jpg', BASE_KHRONOS_SAMPLE_URL),
+        source: link('./CarConcept', BASE_KHRONOS_SAMPLE_SOURCE_URL),
+        variants: {
+            'glTF': link('./CarConcept/glTF/CarConcept.gltf', BASE_KHRONOS_SAMPLE_URL),
+            'glTF-Binary': link('./CarConcept/glTF-Binary/CarConcept.glb', BASE_KHRONOS_SAMPLE_URL),
+            'glTF-JPG': link('./CarConcept/glTF-JPG/CarConcept.gltf', BASE_KHRONOS_SAMPLE_URL),
+            'glTF-KTX-BasisU-Draco': link('./CarConcept/glTF-KTX-BasisU-Draco/CarConcept.gltf', BASE_KHRONOS_SAMPLE_URL),
+            'glTF-WEBP': link('./CarConcept/glTF-WEBP/CarConcept.gltf', BASE_KHRONOS_SAMPLE_URL),
+        },
+    },
+    {
+        name: 'CarbonFibre',
+        group: 'Khronos',
+        screenshot: link('./CarbonFibre/screenshot/screenshot.jpg', BASE_KHRONOS_SAMPLE_URL),
+        source: link('./CarbonFibre', BASE_KHRONOS_SAMPLE_SOURCE_URL),
+        variants: {
+            'glTF': link('./CarbonFibre/glTF/CarbonFibre.gltf', BASE_KHRONOS_SAMPLE_URL),
+            'glTF-Binary': link('./CarbonFibre/glTF-Binary/CarbonFibre.glb', BASE_KHRONOS_SAMPLE_URL),
         },
     },
     {
@@ -274,6 +325,28 @@ export const index = [
             'glTF-Binary': link('./CesiumMilkTruck/glTF-Binary/CesiumMilkTruck.glb', BASE_KHRONOS_SAMPLE_URL),
             'glTF-Draco': link('./CesiumMilkTruck/glTF-Draco/CesiumMilkTruck.gltf', BASE_KHRONOS_SAMPLE_URL),
             'glTF-Embedded': link('./CesiumMilkTruck/glTF-Embedded/CesiumMilkTruck.gltf', BASE_KHRONOS_SAMPLE_URL),
+        },
+    },
+    {
+        name: 'ChairDamaskPurplegold',
+        group: 'Khronos',
+        screenshot: link('./ChairDamaskPurplegold/screenshot/screenshot.jpg', BASE_KHRONOS_SAMPLE_URL),
+        source: link('./ChairDamaskPurplegold', BASE_KHRONOS_SAMPLE_SOURCE_URL),
+        variants: {
+            'glTF': link('./ChairDamaskPurplegold/glTF/ChairDamaskPurplegold.gltf', BASE_KHRONOS_SAMPLE_URL),
+            'glTF-Binary': link('./ChairDamaskPurplegold/glTF-Binary/ChairDamaskPurplegold.glb', BASE_KHRONOS_SAMPLE_URL),
+        },
+    },
+    {
+        name: 'ChronographWatch',
+        group: 'Khronos',
+        screenshot: link('./ChronographWatch/screenshot/screenshot.jpg', BASE_KHRONOS_SAMPLE_URL),
+        source: link('./ChronographWatch', BASE_KHRONOS_SAMPLE_SOURCE_URL),
+        variants: {
+            'glTF': link('./ChronographWatch/glTF/ChronographWatch.gltf', BASE_KHRONOS_SAMPLE_URL),
+            'glTF-Binary': link('./ChronographWatch/glTF-Binary/ChronographWatch.glb', BASE_KHRONOS_SAMPLE_URL),
+            'glTF-KTX-BasisU': link('./ChronographWatch/glTF-KTX-BasisU/ChronographWatch.gltf', BASE_KHRONOS_SAMPLE_URL),
+            'glTF-WEBP': link('./ChronographWatch/glTF-WEBP/ChronographWatch.gltf', BASE_KHRONOS_SAMPLE_URL),
         },
     },
     {
@@ -304,6 +377,176 @@ export const index = [
         variants: {
             'glTF': link('./ClearcoatWicker/glTF/ClearcoatWicker.gltf', BASE_KHRONOS_SAMPLE_URL),
             'glTF-Binary': link('./ClearcoatWicker/glTF-Binary/ClearcoatWicker.glb', BASE_KHRONOS_SAMPLE_URL),
+        },
+    },
+    {
+        name: 'CommercialRefrigerator',
+        group: 'Khronos',
+        screenshot: link('./CommercialRefrigerator/screenshot/screenshot.jpg', BASE_KHRONOS_SAMPLE_URL),
+        source: link('./CommercialRefrigerator', BASE_KHRONOS_SAMPLE_SOURCE_URL),
+        variants: {
+            'glTF': link('./CommercialRefrigerator/glTF/CommercialRefrigerator.gltf', BASE_KHRONOS_SAMPLE_URL),
+            'glTF-Binary': link('./CommercialRefrigerator/glTF-Binary/CommercialRefrigerator.glb', BASE_KHRONOS_SAMPLE_URL),
+        },
+    },
+    {
+        name: 'CompareAlphaCoverage',
+        group: 'Khronos',
+        screenshot: link('./CompareAlphaCoverage/screenshot/screenshot.jpg', BASE_KHRONOS_SAMPLE_URL),
+        source: link('./CompareAlphaCoverage', BASE_KHRONOS_SAMPLE_SOURCE_URL),
+        variants: {
+            'glTF': link('./CompareAlphaCoverage/glTF/CompareAlphaCoverage.gltf', BASE_KHRONOS_SAMPLE_URL),
+            'glTF-Binary': link('./CompareAlphaCoverage/glTF-Binary/CompareAlphaCoverage.glb', BASE_KHRONOS_SAMPLE_URL),
+        },
+    },
+    {
+        name: 'CompareAmbientOcclusion',
+        group: 'Khronos',
+        screenshot: link('./CompareAmbientOcclusion/screenshot/screenshot.jpg', BASE_KHRONOS_SAMPLE_URL),
+        source: link('./CompareAmbientOcclusion', BASE_KHRONOS_SAMPLE_SOURCE_URL),
+        variants: {
+            'glTF': link('./CompareAmbientOcclusion/glTF/CompareAmbientOcclusion.gltf', BASE_KHRONOS_SAMPLE_URL),
+            'glTF-Binary': link('./CompareAmbientOcclusion/glTF-Binary/CompareAmbientOcclusion.glb', BASE_KHRONOS_SAMPLE_URL),
+        },
+    },
+    {
+        name: 'CompareAnisotropy',
+        group: 'Khronos',
+        screenshot: link('./CompareAnisotropy/screenshot/screenshot.jpg', BASE_KHRONOS_SAMPLE_URL),
+        source: link('./CompareAnisotropy', BASE_KHRONOS_SAMPLE_SOURCE_URL),
+        variants: {
+            'glTF': link('./CompareAnisotropy/glTF/CompareAnisotropy.gltf', BASE_KHRONOS_SAMPLE_URL),
+            'glTF-Binary': link('./CompareAnisotropy/glTF-Binary/CompareAnisotropy.glb', BASE_KHRONOS_SAMPLE_URL),
+        },
+    },
+    {
+        name: 'CompareBaseColor',
+        group: 'Khronos',
+        screenshot: link('./CompareBaseColor/screenshot/screenshot.jpg', BASE_KHRONOS_SAMPLE_URL),
+        source: link('./CompareBaseColor', BASE_KHRONOS_SAMPLE_SOURCE_URL),
+        variants: {
+            'glTF': link('./CompareBaseColor/glTF/CompareBaseColor.gltf', BASE_KHRONOS_SAMPLE_URL),
+            'glTF-Binary': link('./CompareBaseColor/glTF-Binary/CompareBaseColor.glb', BASE_KHRONOS_SAMPLE_URL),
+        },
+    },
+    {
+        name: 'CompareClearcoat',
+        group: 'Khronos',
+        screenshot: link('./CompareClearcoat/screenshot/screenshot.jpg', BASE_KHRONOS_SAMPLE_URL),
+        source: link('./CompareClearcoat', BASE_KHRONOS_SAMPLE_SOURCE_URL),
+        variants: {
+            'glTF': link('./CompareClearcoat/glTF/CompareClearcoat.gltf', BASE_KHRONOS_SAMPLE_URL),
+            'glTF-Binary': link('./CompareClearcoat/glTF-Binary/CompareClearcoat.glb', BASE_KHRONOS_SAMPLE_URL),
+        },
+    },
+    {
+        name: 'CompareDispersion',
+        group: 'Khronos',
+        screenshot: link('./CompareDispersion/screenshot/screenshot.jpg', BASE_KHRONOS_SAMPLE_URL),
+        source: link('./CompareDispersion', BASE_KHRONOS_SAMPLE_SOURCE_URL),
+        variants: {
+            'glTF': link('./CompareDispersion/glTF/CompareDispersion.gltf', BASE_KHRONOS_SAMPLE_URL),
+            'glTF-Binary': link('./CompareDispersion/glTF-Binary/CompareDispersion.glb', BASE_KHRONOS_SAMPLE_URL),
+        },
+    },
+    {
+        name: 'CompareEmissiveStrength',
+        group: 'Khronos',
+        screenshot: link('./CompareEmissiveStrength/screenshot/screenshot.jpg', BASE_KHRONOS_SAMPLE_URL),
+        source: link('./CompareEmissiveStrength', BASE_KHRONOS_SAMPLE_SOURCE_URL),
+        variants: {
+            'glTF': link('./CompareEmissiveStrength/glTF/CompareEmissiveStrength.gltf', BASE_KHRONOS_SAMPLE_URL),
+            'glTF-Binary': link('./CompareEmissiveStrength/glTF-Binary/CompareEmissiveStrength.glb', BASE_KHRONOS_SAMPLE_URL),
+        },
+    },
+    {
+        name: 'CompareIor',
+        group: 'Khronos',
+        screenshot: link('./CompareIor/screenshot/screenshot.jpg', BASE_KHRONOS_SAMPLE_URL),
+        source: link('./CompareIor', BASE_KHRONOS_SAMPLE_SOURCE_URL),
+        variants: {
+            'glTF': link('./CompareIor/glTF/CompareIor.gltf', BASE_KHRONOS_SAMPLE_URL),
+            'glTF-Binary': link('./CompareIor/glTF-Binary/CompareIor.glb', BASE_KHRONOS_SAMPLE_URL),
+        },
+    },
+    {
+        name: 'CompareIridescence',
+        group: 'Khronos',
+        screenshot: link('./CompareIridescence/screenshot/screenshot.jpg', BASE_KHRONOS_SAMPLE_URL),
+        source: link('./CompareIridescence', BASE_KHRONOS_SAMPLE_SOURCE_URL),
+        variants: {
+            'glTF': link('./CompareIridescence/glTF/CompareIridescence.gltf', BASE_KHRONOS_SAMPLE_URL),
+            'glTF-Binary': link('./CompareIridescence/glTF-Binary/CompareIridescence.glb', BASE_KHRONOS_SAMPLE_URL),
+        },
+    },
+    {
+        name: 'CompareMetallic',
+        group: 'Khronos',
+        screenshot: link('./CompareMetallic/screenshot/screenshot.jpg', BASE_KHRONOS_SAMPLE_URL),
+        source: link('./CompareMetallic', BASE_KHRONOS_SAMPLE_SOURCE_URL),
+        variants: {
+            'glTF': link('./CompareMetallic/glTF/CompareMetallic.gltf', BASE_KHRONOS_SAMPLE_URL),
+            'glTF-Binary': link('./CompareMetallic/glTF-Binary/CompareMetallic.glb', BASE_KHRONOS_SAMPLE_URL),
+        },
+    },
+    {
+        name: 'CompareNormal',
+        group: 'Khronos',
+        screenshot: link('./CompareNormal/screenshot/screenshot.jpg', BASE_KHRONOS_SAMPLE_URL),
+        source: link('./CompareNormal', BASE_KHRONOS_SAMPLE_SOURCE_URL),
+        variants: {
+            'glTF': link('./CompareNormal/glTF/CompareNormal.gltf', BASE_KHRONOS_SAMPLE_URL),
+            'glTF-Binary': link('./CompareNormal/glTF-Binary/CompareNormal.glb', BASE_KHRONOS_SAMPLE_URL),
+        },
+    },
+    {
+        name: 'CompareRoughness',
+        group: 'Khronos',
+        screenshot: link('./CompareRoughness/screenshot/screenshot.jpg', BASE_KHRONOS_SAMPLE_URL),
+        source: link('./CompareRoughness', BASE_KHRONOS_SAMPLE_SOURCE_URL),
+        variants: {
+            'glTF': link('./CompareRoughness/glTF/CompareRoughness.gltf', BASE_KHRONOS_SAMPLE_URL),
+            'glTF-Binary': link('./CompareRoughness/glTF-Binary/CompareRoughness.glb', BASE_KHRONOS_SAMPLE_URL),
+        },
+    },
+    {
+        name: 'CompareSheen',
+        group: 'Khronos',
+        screenshot: link('./CompareSheen/screenshot/screenshot.jpg', BASE_KHRONOS_SAMPLE_URL),
+        source: link('./CompareSheen', BASE_KHRONOS_SAMPLE_SOURCE_URL),
+        variants: {
+            'glTF': link('./CompareSheen/glTF/CompareSheen.gltf', BASE_KHRONOS_SAMPLE_URL),
+            'glTF-Binary': link('./CompareSheen/glTF-Binary/CompareSheen.glb', BASE_KHRONOS_SAMPLE_URL),
+        },
+    },
+    {
+        name: 'CompareSpecular',
+        group: 'Khronos',
+        screenshot: link('./CompareSpecular/screenshot/screenshot.jpg', BASE_KHRONOS_SAMPLE_URL),
+        source: link('./CompareSpecular', BASE_KHRONOS_SAMPLE_SOURCE_URL),
+        variants: {
+            'glTF': link('./CompareSpecular/glTF/CompareSpecular.gltf', BASE_KHRONOS_SAMPLE_URL),
+            'glTF-Binary': link('./CompareSpecular/glTF-Binary/CompareSpecular.glb', BASE_KHRONOS_SAMPLE_URL),
+        },
+    },
+    {
+        name: 'CompareTransmission',
+        group: 'Khronos',
+        screenshot: link('./CompareTransmission/screenshot/screenshot.jpg', BASE_KHRONOS_SAMPLE_URL),
+        source: link('./CompareTransmission', BASE_KHRONOS_SAMPLE_SOURCE_URL),
+        variants: {
+            'glTF': link('./CompareTransmission/glTF/CompareTransmission.gltf', BASE_KHRONOS_SAMPLE_URL),
+            'glTF-Binary': link('./CompareTransmission/glTF-Binary/CompareTransmission.glb', BASE_KHRONOS_SAMPLE_URL),
+        },
+    },
+    {
+        name: 'CompareVolume',
+        group: 'Khronos',
+        screenshot: link('./CompareVolume/screenshot/screenshot.jpg', BASE_KHRONOS_SAMPLE_URL),
+        source: link('./CompareVolume', BASE_KHRONOS_SAMPLE_SOURCE_URL),
+        variants: {
+            'glTF': link('./CompareVolume/glTF/CompareVolume.gltf', BASE_KHRONOS_SAMPLE_URL),
+            'glTF-Binary': link('./CompareVolume/glTF-Binary/CompareVolume.glb', BASE_KHRONOS_SAMPLE_URL),
         },
     },
     {
@@ -338,6 +581,56 @@ export const index = [
         },
     },
     {
+        name: 'DiffuseTransmissionPlant',
+        group: 'Khronos',
+        screenshot: link('./DiffuseTransmissionPlant/screenshot/screenshot.jpg', BASE_KHRONOS_SAMPLE_URL),
+        source: link('./DiffuseTransmissionPlant', BASE_KHRONOS_SAMPLE_SOURCE_URL),
+        variants: {
+            'glTF': link('./DiffuseTransmissionPlant/glTF/DiffuseTransmissionPlant.gltf', BASE_KHRONOS_SAMPLE_URL),
+            'glTF-Binary': link('./DiffuseTransmissionPlant/glTF-Binary/DiffuseTransmissionPlant.glb', BASE_KHRONOS_SAMPLE_URL),
+        },
+    },
+    {
+        name: 'DiffuseTransmissionTeacup',
+        group: 'Khronos',
+        screenshot: link('./DiffuseTransmissionTeacup/screenshot/screenshot.jpg', BASE_KHRONOS_SAMPLE_URL),
+        source: link('./DiffuseTransmissionTeacup', BASE_KHRONOS_SAMPLE_SOURCE_URL),
+        variants: {
+            'glTF': link('./DiffuseTransmissionTeacup/glTF/DiffuseTransmissionTeacup.gltf', BASE_KHRONOS_SAMPLE_URL),
+            'glTF-Binary': link('./DiffuseTransmissionTeacup/glTF-Binary/DiffuseTransmissionTeacup.glb', BASE_KHRONOS_SAMPLE_URL),
+        },
+    },
+    {
+        name: 'DiffuseTransmissionTest',
+        group: 'Khronos',
+        screenshot: link('./DiffuseTransmissionTest/screenshot/screenshot.jpg', BASE_KHRONOS_SAMPLE_URL),
+        source: link('./DiffuseTransmissionTest', BASE_KHRONOS_SAMPLE_SOURCE_URL),
+        variants: {
+            'glTF': link('./DiffuseTransmissionTest/glTF/DiffuseTransmissionTest.gltf', BASE_KHRONOS_SAMPLE_URL),
+            'glTF-Binary': link('./DiffuseTransmissionTest/glTF-Binary/DiffuseTransmissionTest.glb', BASE_KHRONOS_SAMPLE_URL),
+        },
+    },
+    {
+        name: 'DirectionalLight',
+        group: 'Khronos',
+        screenshot: link('./DirectionalLight/screenshot/screenshot.png', BASE_KHRONOS_SAMPLE_URL),
+        source: link('./DirectionalLight', BASE_KHRONOS_SAMPLE_SOURCE_URL),
+        variants: {
+            'glTF': link('./DirectionalLight/glTF/DirectionalLight.gltf', BASE_KHRONOS_SAMPLE_URL),
+            'glTF-Binary': link('./DirectionalLight/glTF-Binary/DirectionalLight.glb', BASE_KHRONOS_SAMPLE_URL),
+        },
+    },
+    {
+        name: 'DispersionTest',
+        group: 'Khronos',
+        screenshot: link('./DispersionTest/screenshot/screenshot.png', BASE_KHRONOS_SAMPLE_URL),
+        source: link('./DispersionTest', BASE_KHRONOS_SAMPLE_SOURCE_URL),
+        variants: {
+            'glTF': link('./DispersionTest/glTF/DispersionTest.gltf', BASE_KHRONOS_SAMPLE_URL),
+            'glTF-Binary': link('./DispersionTest/glTF-Binary/DispersionTest.glb', BASE_KHRONOS_SAMPLE_URL),
+        },
+    },
+    {
         name: 'DragonAttenuation',
         group: 'Khronos',
         screenshot: link('./DragonAttenuation/screenshot/screenshot.jpg', BASE_KHRONOS_SAMPLE_URL),
@@ -346,6 +639,16 @@ export const index = [
             'glTF': link('./DragonAttenuation/glTF/DragonAttenuation.gltf', BASE_KHRONOS_SAMPLE_URL),
             'glTF-Binary': link('./DragonAttenuation/glTF-Binary/DragonAttenuation.glb', BASE_KHRONOS_SAMPLE_URL),
             'glTF-Meshopt': link('./DragonAttenuation/glTF-Meshopt/DragonAttenuation.gltf', BASE_KHRONOS_SAMPLE_URL),
+        },
+    },
+    {
+        name: 'DragonDispersion',
+        group: 'Khronos',
+        screenshot: link('./DragonDispersion/screenshot/screenshot.jpg', BASE_KHRONOS_SAMPLE_URL),
+        source: link('./DragonDispersion', BASE_KHRONOS_SAMPLE_SOURCE_URL),
+        variants: {
+            'glTF': link('./DragonDispersion/glTF/DragonDispersion.gltf', BASE_KHRONOS_SAMPLE_URL),
+            'glTF-Binary': link('./DragonDispersion/glTF-Binary/DragonDispersion.glb', BASE_KHRONOS_SAMPLE_URL),
         },
     },
     {
@@ -401,18 +704,6 @@ export const index = [
         },
     },
     {
-        name: 'GearboxAssy',
-        group: 'Khronos',
-        screenshot: link('./GearboxAssy/screenshot/screenshot.png', BASE_KHRONOS_SAMPLE_URL),
-        source: link('./GearboxAssy', BASE_KHRONOS_SAMPLE_SOURCE_URL),
-        variants: {
-            'glTF': link('./GearboxAssy/glTF/GearboxAssy.gltf', BASE_KHRONOS_SAMPLE_URL),
-            'glTF-Binary': link('./GearboxAssy/glTF-Binary/GearboxAssy.glb', BASE_KHRONOS_SAMPLE_URL),
-            'glTF-Draco': link('./GearboxAssy/glTF-Draco/GearboxAssy.gltf', BASE_KHRONOS_SAMPLE_URL),
-            'glTF-Embedded': link('./GearboxAssy/glTF-Embedded/GearboxAssy.gltf', BASE_KHRONOS_SAMPLE_URL),
-        },
-    },
-    {
         name: 'GlamVelvetSofa',
         group: 'Khronos',
         screenshot: link('./GlamVelvetSofa/screenshot/screenshot.jpg', BASE_KHRONOS_SAMPLE_URL),
@@ -423,6 +714,46 @@ export const index = [
         },
     },
     {
+        name: 'GlassBrokenWindow',
+        group: 'Khronos',
+        screenshot: link('./GlassBrokenWindow/screenshot/screenshot.jpg', BASE_KHRONOS_SAMPLE_URL),
+        source: link('./GlassBrokenWindow', BASE_KHRONOS_SAMPLE_SOURCE_URL),
+        variants: {
+            'glTF': link('./GlassBrokenWindow/glTF/GlassBrokenWindow.gltf', BASE_KHRONOS_SAMPLE_URL),
+            'glTF-Binary': link('./GlassBrokenWindow/glTF-Binary/GlassBrokenWindow.glb', BASE_KHRONOS_SAMPLE_URL),
+        },
+    },
+    {
+        name: 'GlassHurricaneCandleHolder',
+        group: 'Khronos',
+        screenshot: link('./GlassHurricaneCandleHolder/screenshot/screenshot.jpg', BASE_KHRONOS_SAMPLE_URL),
+        source: link('./GlassHurricaneCandleHolder', BASE_KHRONOS_SAMPLE_SOURCE_URL),
+        variants: {
+            'glTF': link('./GlassHurricaneCandleHolder/glTF/GlassHurricaneCandleHolder.gltf', BASE_KHRONOS_SAMPLE_URL),
+            'glTF-Binary': link('./GlassHurricaneCandleHolder/glTF-Binary/GlassHurricaneCandleHolder.glb', BASE_KHRONOS_SAMPLE_URL),
+        },
+    },
+    {
+        name: 'GlassVaseFlowers',
+        group: 'Khronos',
+        screenshot: link('./GlassVaseFlowers/screenshot/screenshot.jpg', BASE_KHRONOS_SAMPLE_URL),
+        source: link('./GlassVaseFlowers', BASE_KHRONOS_SAMPLE_SOURCE_URL),
+        variants: {
+            'glTF': link('./GlassVaseFlowers/glTF/GlassVaseFlowers.gltf', BASE_KHRONOS_SAMPLE_URL),
+            'glTF-Binary': link('./GlassVaseFlowers/glTF-Binary/GlassVaseFlowers.glb', BASE_KHRONOS_SAMPLE_URL),
+        },
+    },
+    {
+        name: 'IORTestGrid',
+        group: 'Khronos',
+        screenshot: link('./IORTestGrid/screenshot/screenshot.jpg', BASE_KHRONOS_SAMPLE_URL),
+        source: link('./IORTestGrid', BASE_KHRONOS_SAMPLE_SOURCE_URL),
+        variants: {
+            'glTF': link('./IORTestGrid/glTF/IORTestGrid.gltf', BASE_KHRONOS_SAMPLE_URL),
+            'glTF-Binary': link('./IORTestGrid/glTF-Binary/IORTestGrid.glb', BASE_KHRONOS_SAMPLE_URL),
+        },
+    },
+    {
         name: 'InterpolationTest',
         group: 'Khronos',
         screenshot: link('./InterpolationTest/screenshot/screenshot.gif', BASE_KHRONOS_SAMPLE_URL),
@@ -430,6 +761,16 @@ export const index = [
         variants: {
             'glTF': link('./InterpolationTest/glTF/InterpolationTest.gltf', BASE_KHRONOS_SAMPLE_URL),
             'glTF-Binary': link('./InterpolationTest/glTF-Binary/InterpolationTest.glb', BASE_KHRONOS_SAMPLE_URL),
+        },
+    },
+    {
+        name: 'IridescenceAbalone',
+        group: 'Khronos',
+        screenshot: link('./IridescenceAbalone/screenshot/screenshot.jpg', BASE_KHRONOS_SAMPLE_URL),
+        source: link('./IridescenceAbalone', BASE_KHRONOS_SAMPLE_SOURCE_URL),
+        variants: {
+            'glTF': link('./IridescenceAbalone/glTF/IridescenceAbalone.gltf', BASE_KHRONOS_SAMPLE_URL),
+            'glTF-Binary': link('./IridescenceAbalone/glTF-Binary/IridescenceAbalone.glb', BASE_KHRONOS_SAMPLE_URL),
         },
     },
     {
@@ -500,6 +841,15 @@ export const index = [
         variants: {
             'glTF': link('./LightsPunctualLamp/glTF/LightsPunctualLamp.gltf', BASE_KHRONOS_SAMPLE_URL),
             'glTF-Binary': link('./LightsPunctualLamp/glTF-Binary/LightsPunctualLamp.glb', BASE_KHRONOS_SAMPLE_URL),
+        },
+    },
+    {
+        name: 'MandarinOrange',
+        group: 'Khronos',
+        screenshot: link('./MandarinOrange/screenshot/screenshot.jpg', BASE_KHRONOS_SAMPLE_URL),
+        source: link('./MandarinOrange', BASE_KHRONOS_SAMPLE_SOURCE_URL),
+        variants: {
+            'glTF': link('./MandarinOrange/glTF/MandarinOrange.gltf', BASE_KHRONOS_SAMPLE_URL),
         },
     },
     {
@@ -606,6 +956,15 @@ export const index = [
         },
     },
     {
+        name: 'NodePerformanceTest',
+        group: 'Khronos',
+        screenshot: link('./NodePerformanceTest/screenshot/screenshot_large.jpg', BASE_KHRONOS_SAMPLE_URL),
+        source: link('./NodePerformanceTest', BASE_KHRONOS_SAMPLE_SOURCE_URL),
+        variants: {
+            'glTF-Binary': link('./NodePerformanceTest/glTF-Binary/NodePerformanceTest.glb', BASE_KHRONOS_SAMPLE_URL),
+        },
+    },
+    {
         name: 'NormalTangentMirrorTest',
         group: 'Khronos',
         screenshot: link('./NormalTangentMirrorTest/screenshot/screenshot.png', BASE_KHRONOS_SAMPLE_URL),
@@ -613,7 +972,6 @@ export const index = [
         variants: {
             'glTF': link('./NormalTangentMirrorTest/glTF/NormalTangentMirrorTest.gltf', BASE_KHRONOS_SAMPLE_URL),
             'glTF-Binary': link('./NormalTangentMirrorTest/glTF-Binary/NormalTangentMirrorTest.glb', BASE_KHRONOS_SAMPLE_URL),
-            'glTF-Embedded': link('./NormalTangentMirrorTest/glTF-Embedded/NormalTangentMirrorTest.gltf', BASE_KHRONOS_SAMPLE_URL),
         },
     },
     {
@@ -624,7 +982,6 @@ export const index = [
         variants: {
             'glTF': link('./NormalTangentTest/glTF/NormalTangentTest.gltf', BASE_KHRONOS_SAMPLE_URL),
             'glTF-Binary': link('./NormalTangentTest/glTF-Binary/NormalTangentTest.glb', BASE_KHRONOS_SAMPLE_URL),
-            'glTF-Embedded': link('./NormalTangentTest/glTF-Embedded/NormalTangentTest.gltf', BASE_KHRONOS_SAMPLE_URL),
         },
     },
     {
@@ -639,15 +996,51 @@ export const index = [
         },
     },
     {
-        name: 'ReciprocatingSaw',
+        name: 'PlaysetLightTest',
         group: 'Khronos',
-        screenshot: link('./ReciprocatingSaw/screenshot/screenshot.png', BASE_KHRONOS_SAMPLE_URL),
-        source: link('./ReciprocatingSaw', BASE_KHRONOS_SAMPLE_SOURCE_URL),
+        screenshot: link('./PlaysetLightTest/screenshot/screenshot_large.jpg', BASE_KHRONOS_SAMPLE_URL),
+        source: link('./PlaysetLightTest', BASE_KHRONOS_SAMPLE_SOURCE_URL),
         variants: {
-            'glTF': link('./ReciprocatingSaw/glTF/ReciprocatingSaw.gltf', BASE_KHRONOS_SAMPLE_URL),
-            'glTF-Binary': link('./ReciprocatingSaw/glTF-Binary/ReciprocatingSaw.glb', BASE_KHRONOS_SAMPLE_URL),
-            'glTF-Draco': link('./ReciprocatingSaw/glTF-Draco/ReciprocatingSaw.gltf', BASE_KHRONOS_SAMPLE_URL),
-            'glTF-Embedded': link('./ReciprocatingSaw/glTF-Embedded/ReciprocatingSaw.gltf', BASE_KHRONOS_SAMPLE_URL),
+            'glTF-Binary': link('./PlaysetLightTest/glTF-Binary/PlaysetLightTest.glb', BASE_KHRONOS_SAMPLE_URL),
+        },
+    },
+    {
+        name: 'PointLightIntensityTest',
+        group: 'Khronos',
+        screenshot: link('./PointLightIntensityTest/screenshot/screenshot.jpg', BASE_KHRONOS_SAMPLE_URL),
+        source: link('./PointLightIntensityTest', BASE_KHRONOS_SAMPLE_SOURCE_URL),
+        variants: {
+            'glTF': link('./PointLightIntensityTest/glTF/PointLightIntensityTest.gltf', BASE_KHRONOS_SAMPLE_URL),
+            'glTF-Binary': link('./PointLightIntensityTest/glTF-Binary/PointLightIntensityTest.glb', BASE_KHRONOS_SAMPLE_URL),
+        },
+    },
+    {
+        name: 'PotOfCoals',
+        group: 'Khronos',
+        screenshot: link('./PotOfCoals/screenshot/screenshot.jpg', BASE_KHRONOS_SAMPLE_URL),
+        source: link('./PotOfCoals', BASE_KHRONOS_SAMPLE_SOURCE_URL),
+        variants: {
+            'glTF': link('./PotOfCoals/glTF/PotOfCoals.gltf', BASE_KHRONOS_SAMPLE_URL),
+            'glTF-Binary': link('./PotOfCoals/glTF-Binary/PotOfCoals.glb', BASE_KHRONOS_SAMPLE_URL),
+        },
+    },
+    {
+        name: 'PotOfCoalsAnimationPointer',
+        group: 'Khronos',
+        screenshot: link('./PotOfCoalsAnimationPointer/screenshot/screenshot.jpg', BASE_KHRONOS_SAMPLE_URL),
+        source: link('./PotOfCoalsAnimationPointer', BASE_KHRONOS_SAMPLE_SOURCE_URL),
+        variants: {
+            'glTF': link('./PotOfCoalsAnimationPointer/glTF/PotOfCoalsAnimationPointer.gltf', BASE_KHRONOS_SAMPLE_URL),
+            'glTF-Binary': link('./PotOfCoalsAnimationPointer/glTF-Binary/PotOfCoalsAnimationPointer.glb', BASE_KHRONOS_SAMPLE_URL),
+        },
+    },
+    {
+        name: 'PrimitiveModeNormalsTest',
+        group: 'Khronos',
+        screenshot: link('./PrimitiveModeNormalsTest/screenshot/screenshot.png', BASE_KHRONOS_SAMPLE_URL),
+        source: link('./PrimitiveModeNormalsTest', BASE_KHRONOS_SAMPLE_SOURCE_URL),
+        variants: {
+            'glTF': link('./PrimitiveModeNormalsTest/glTF/PrimitiveModeNormalsTest.gltf', BASE_KHRONOS_SAMPLE_URL),
         },
     },
     {
@@ -685,6 +1078,16 @@ export const index = [
         },
     },
     {
+        name: 'ScatteringSkull',
+        group: 'Khronos',
+        screenshot: link('./ScatteringSkull/screenshot/screenshot.jpg', BASE_KHRONOS_SAMPLE_URL),
+        source: link('./ScatteringSkull', BASE_KHRONOS_SAMPLE_SOURCE_URL),
+        variants: {
+            'glTF': link('./ScatteringSkull/glTF/ScatteringSkull.gltf', BASE_KHRONOS_SAMPLE_URL),
+            'glTF-Binary': link('./ScatteringSkull/glTF-Binary/ScatteringSkull.glb', BASE_KHRONOS_SAMPLE_URL),
+        },
+    },
+    {
         name: 'SciFiHelmet',
         group: 'Khronos',
         screenshot: link('./SciFiHelmet/screenshot/screenshot.jpg', BASE_KHRONOS_SAMPLE_URL),
@@ -713,6 +1116,26 @@ export const index = [
         },
     },
     {
+        name: 'SheenTestGrid',
+        group: 'Khronos',
+        screenshot: link('./SheenTestGrid/screenshot/screenshot.jpg', BASE_KHRONOS_SAMPLE_URL),
+        source: link('./SheenTestGrid', BASE_KHRONOS_SAMPLE_SOURCE_URL),
+        variants: {
+            'glTF': link('./SheenTestGrid/glTF/SheenTestGrid.gltf', BASE_KHRONOS_SAMPLE_URL),
+            'glTF-Binary': link('./SheenTestGrid/glTF-Binary/SheenTestGrid.glb', BASE_KHRONOS_SAMPLE_URL),
+        },
+    },
+    {
+        name: 'SheenWoodLeatherSofa',
+        group: 'Khronos',
+        screenshot: link('./SheenWoodLeatherSofa/screenshot/screenshot.jpg', BASE_KHRONOS_SAMPLE_URL),
+        source: link('./SheenWoodLeatherSofa', BASE_KHRONOS_SAMPLE_SOURCE_URL),
+        variants: {
+            'glTF': link('./SheenWoodLeatherSofa/glTF/SheenWoodLeatherSofa.gltf', BASE_KHRONOS_SAMPLE_URL),
+            'glTF-Binary': link('./SheenWoodLeatherSofa/glTF-Binary/SheenWoodLeatherSofa.glb', BASE_KHRONOS_SAMPLE_URL),
+        },
+    },
+    {
         name: 'SimpleInstancing',
         group: 'Khronos',
         screenshot: link('./SimpleInstancing/screenshot/screenshot.png', BASE_KHRONOS_SAMPLE_URL),
@@ -720,6 +1143,16 @@ export const index = [
         variants: {
             'glTF': link('./SimpleInstancing/glTF/SimpleInstancing.gltf', BASE_KHRONOS_SAMPLE_URL),
             'glTF-Binary': link('./SimpleInstancing/glTF-Binary/SimpleInstancing.glb', BASE_KHRONOS_SAMPLE_URL),
+        },
+    },
+    {
+        name: 'SimpleMaterial',
+        group: 'Khronos',
+        screenshot: link('./SimpleMaterial/screenshot/screenshot.png', BASE_KHRONOS_SAMPLE_URL),
+        source: link('./SimpleMaterial', BASE_KHRONOS_SAMPLE_SOURCE_URL),
+        variants: {
+            'glTF': link('./SimpleMaterial/glTF/SimpleMaterial.gltf', BASE_KHRONOS_SAMPLE_URL),
+            'glTF-Embedded': link('./SimpleMaterial/glTF-Embedded/SimpleMaterial.gltf', BASE_KHRONOS_SAMPLE_URL),
         },
     },
     {
@@ -763,6 +1196,16 @@ export const index = [
         },
     },
     {
+        name: 'SimpleTexture',
+        group: 'Khronos',
+        screenshot: link('./SimpleTexture/screenshot/screenshot.png', BASE_KHRONOS_SAMPLE_URL),
+        source: link('./SimpleTexture', BASE_KHRONOS_SAMPLE_SOURCE_URL),
+        variants: {
+            'glTF': link('./SimpleTexture/glTF/SimpleTexture.gltf', BASE_KHRONOS_SAMPLE_URL),
+            'glTF-Embedded': link('./SimpleTexture/glTF-Embedded/SimpleTexture.gltf', BASE_KHRONOS_SAMPLE_URL),
+        },
+    },
+    {
         name: 'SpecGlossVsMetalRough',
         group: 'Khronos',
         screenshot: link('./SpecGlossVsMetalRough/screenshot/screenshot.jpg', BASE_KHRONOS_SAMPLE_URL),
@@ -770,6 +1213,16 @@ export const index = [
         variants: {
             'glTF': link('./SpecGlossVsMetalRough/glTF/SpecGlossVsMetalRough.gltf', BASE_KHRONOS_SAMPLE_URL),
             'glTF-Binary': link('./SpecGlossVsMetalRough/glTF-Binary/SpecGlossVsMetalRough.glb', BASE_KHRONOS_SAMPLE_URL),
+        },
+    },
+    {
+        name: 'SpecularSilkPouf',
+        group: 'Khronos',
+        screenshot: link('./SpecularSilkPouf/screenshot/screenshot.jpg', BASE_KHRONOS_SAMPLE_URL),
+        source: link('./SpecularSilkPouf', BASE_KHRONOS_SAMPLE_SOURCE_URL),
+        variants: {
+            'glTF': link('./SpecularSilkPouf/glTF/SpecularSilkPouf.gltf', BASE_KHRONOS_SAMPLE_URL),
+            'glTF-Binary': link('./SpecularSilkPouf/glTF-Binary/SpecularSilkPouf.glb', BASE_KHRONOS_SAMPLE_URL),
         },
     },
     {
@@ -800,6 +1253,17 @@ export const index = [
             'glTF': link('./StainedGlassLamp/glTF/StainedGlassLamp.gltf', BASE_KHRONOS_SAMPLE_URL),
             'glTF-JPG-PNG': link('./StainedGlassLamp/glTF-JPG-PNG/StainedGlassLamp.gltf', BASE_KHRONOS_SAMPLE_URL),
             'glTF-KTX-BasisU': link('./StainedGlassLamp/glTF-KTX-BasisU/StainedGlassLamp.gltf', BASE_KHRONOS_SAMPLE_URL),
+        },
+    },
+    {
+        name: 'SunglassesKhronos',
+        group: 'Khronos',
+        screenshot: link('./SunglassesKhronos/screenshot/screenshot.jpg', BASE_KHRONOS_SAMPLE_URL),
+        source: link('./SunglassesKhronos', BASE_KHRONOS_SAMPLE_SOURCE_URL),
+        variants: {
+            'glTF': link('./SunglassesKhronos/glTF/SunglassesKhronos.gltf', BASE_KHRONOS_SAMPLE_URL),
+            'glTF-Binary': link('./SunglassesKhronos/glTF-Binary/SunglassesKhronos.glb', BASE_KHRONOS_SAMPLE_URL),
+            'glTF-Draco': link('./SunglassesKhronos/glTF-Draco/SunglassesKhronos.gltf', BASE_KHRONOS_SAMPLE_URL),
         },
     },
     {
@@ -883,6 +1347,16 @@ export const index = [
         },
     },
     {
+        name: 'TransmissionOrderTest',
+        group: 'Khronos',
+        screenshot: link('./TransmissionOrderTest/screenshot/screenshot.jpg', BASE_KHRONOS_SAMPLE_URL),
+        source: link('./TransmissionOrderTest', BASE_KHRONOS_SAMPLE_SOURCE_URL),
+        variants: {
+            'glTF': link('./TransmissionOrderTest/glTF/TransmissionOrderTest.gltf', BASE_KHRONOS_SAMPLE_URL),
+            'glTF-Binary': link('./TransmissionOrderTest/glTF-Binary/TransmissionOrderTest.glb', BASE_KHRONOS_SAMPLE_URL),
+        },
+    },
+    {
         name: 'TransmissionRoughnessTest',
         group: 'Khronos',
         screenshot: link('./TransmissionRoughnessTest/screenshot/screenshot.jpg', BASE_KHRONOS_SAMPLE_URL),
@@ -900,6 +1374,16 @@ export const index = [
         variants: {
             'glTF': link('./TransmissionTest/glTF/TransmissionTest.gltf', BASE_KHRONOS_SAMPLE_URL),
             'glTF-Binary': link('./TransmissionTest/glTF-Binary/TransmissionTest.glb', BASE_KHRONOS_SAMPLE_URL),
+        },
+    },
+    {
+        name: 'TransmissionThinwallTestGrid',
+        group: 'Khronos',
+        screenshot: link('./TransmissionThinwallTestGrid/screenshot/screenshot.jpg', BASE_KHRONOS_SAMPLE_URL),
+        source: link('./TransmissionThinwallTestGrid', BASE_KHRONOS_SAMPLE_SOURCE_URL),
+        variants: {
+            'glTF': link('./TransmissionThinwallTestGrid/glTF/TransmissionThinwallTestGrid.gltf', BASE_KHRONOS_SAMPLE_URL),
+            'glTF-Binary': link('./TransmissionThinwallTestGrid/glTF-Binary/TransmissionThinwallTestGrid.glb', BASE_KHRONOS_SAMPLE_URL),
         },
     },
     {
@@ -952,18 +1436,6 @@ export const index = [
         },
     },
     {
-        name: 'VC',
-        group: 'Khronos',
-        screenshot: link('./VC/screenshot/screenshot.gif', BASE_KHRONOS_SAMPLE_URL),
-        source: link('./VC', BASE_KHRONOS_SAMPLE_SOURCE_URL),
-        variants: {
-            'glTF': link('./VC/glTF/VC.gltf', BASE_KHRONOS_SAMPLE_URL),
-            'glTF-Binary': link('./VC/glTF-Binary/VC.glb', BASE_KHRONOS_SAMPLE_URL),
-            'glTF-Draco': link('./VC/glTF-Draco/VC.gltf', BASE_KHRONOS_SAMPLE_URL),
-            'glTF-Embedded': link('./VC/glTF-Embedded/VC.gltf', BASE_KHRONOS_SAMPLE_URL),
-        },
-    },
-    {
         name: 'VertexColorTest',
         group: 'Khronos',
         screenshot: link('./VertexColorTest/screenshot/screenshot.png', BASE_KHRONOS_SAMPLE_URL),
@@ -975,6 +1447,18 @@ export const index = [
         },
     },
     {
+        name: 'VirtualCity',
+        group: 'Khronos',
+        screenshot: link('./VirtualCity/screenshot/screenshot.gif', BASE_KHRONOS_SAMPLE_URL),
+        source: link('./VirtualCity', BASE_KHRONOS_SAMPLE_SOURCE_URL),
+        variants: {
+            'glTF': link('./VirtualCity/glTF/VirtualCity.gltf', BASE_KHRONOS_SAMPLE_URL),
+            'glTF-Binary': link('./VirtualCity/glTF-Binary/VirtualCity.glb', BASE_KHRONOS_SAMPLE_URL),
+            'glTF-Draco': link('./VirtualCity/glTF-Draco/VirtualCity.gltf', BASE_KHRONOS_SAMPLE_URL),
+            'glTF-Embedded': link('./VirtualCity/glTF-Embedded/VirtualCity.gltf', BASE_KHRONOS_SAMPLE_URL),
+        },
+    },
+    {
         name: 'WaterBottle',
         group: 'Khronos',
         screenshot: link('./WaterBottle/screenshot/screenshot.jpg', BASE_KHRONOS_SAMPLE_URL),
@@ -983,6 +1467,16 @@ export const index = [
             'glTF': link('./WaterBottle/glTF/WaterBottle.gltf', BASE_KHRONOS_SAMPLE_URL),
             'glTF-Binary': link('./WaterBottle/glTF-Binary/WaterBottle.glb', BASE_KHRONOS_SAMPLE_URL),
             'glTF-Draco': link('./WaterBottle/glTF-Draco/WaterBottle.gltf', BASE_KHRONOS_SAMPLE_URL),
+        },
+    },
+    {
+        name: 'XmpMetadataRoundedCube',
+        group: 'Khronos',
+        screenshot: link('./XmpMetadataRoundedCube/screenshot/screenshot.jpg', BASE_KHRONOS_SAMPLE_URL),
+        source: link('./XmpMetadataRoundedCube', BASE_KHRONOS_SAMPLE_SOURCE_URL),
+        variants: {
+            'glTF': link('./XmpMetadataRoundedCube/glTF/XmpMetadataRoundedCube.gltf', BASE_KHRONOS_SAMPLE_URL),
+            'glTF-Binary': link('./XmpMetadataRoundedCube/glTF-Binary/XmpMetadataRoundedCube.glb', BASE_KHRONOS_SAMPLE_URL),
         },
     },
     {
@@ -1029,6 +1523,15 @@ export const index = [
         source: link('./ShadowsSpot', BASE_SAMPLE_SOURCE_URL),
         variants: {
             'glTF': link('./ShadowsSpot/glTF/shadows-spot.gltf'),
+        },
+    },
+    {
+        name: 'SimpleDolly',
+        group: 'Revelry Engine',
+        screenshot: undefined,
+        source: link('./SimpleDolly', BASE_SAMPLE_SOURCE_URL),
+        variants: {
+            'glTF': link('./SimpleDolly/glTF/simple-dolly.gltf'),
         },
     },
 ];

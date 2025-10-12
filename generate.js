@@ -1,11 +1,11 @@
-import { expandGlobSync } from "https://deno.land/std/fs/mod.ts";
+import { expandGlobSync } from "https://deno.land/std@0.224.0/fs/mod.ts";
 
-const BASE_KHRONOS_SAMPLE_URL        = 'https://raw.githubusercontent.com/KhronosGroup/glTF-Sample-Models/4ca0667/2.0/';
-const BASE_KHRONOS_SAMPLE_SOURCE_URL = 'https://github.com/KhronosGroup/glTF-Sample-Models/tree/4ca0667/2.0/';
+const BASE_KHRONOS_SAMPLE_URL        = 'https://raw.githubusercontent.com/KhronosGroup/glTF-Sample-Assets/e72fc5d/Models/';
+const BASE_KHRONOS_SAMPLE_SOURCE_URL = 'https://github.com/KhronosGroup/glTF-Sample-Assets/tree/e72fc5d/Models/';
 const BASE_SAMPLE_SOURCE_URL         = 'https://github.com/revelryengine/sample-models/tree/main/';
 
 const khronosIndex = await fetch(`${BASE_KHRONOS_SAMPLE_URL}/model-index.json`).then(res => res.json());
-const khronosSamples = khronosIndex.map((model) => {
+const khronosSamples = khronosIndex.map((/** @type {{ name: string, variants: Record<string, string>, screenshot: string }} */model) => {
     const variants = Object.fromEntries(Object.entries(model.variants).map(([name, file]) => {
         return [name, `./${model.name}/${name}/${file}`];
     }));
@@ -15,14 +15,18 @@ const khronosSamples = khronosIndex.map((model) => {
     return { ...model, screenshot, source, variants };
 });
 
+/**
+ * @param {string} path
+ */
 function getDirectories(path) {
-    return [...Deno.readDirSync(path)].filter(file => file.isDirectory && !file.name.startsWith('.'))
+    return [...Deno.readDirSync(path)].filter(file => file.isDirectory && !file.name.startsWith('.') && file.name !== 'vendor');
 }
 
 const modelDirs = getDirectories('./');
 const samples   = modelDirs.map(dir => {
     const variantDirs = getDirectories(`./${dir.name}`);
     const variants = Object.fromEntries(variantDirs.map(varDir => {
+        console.log(`./${dir.name}/${varDir.name}/*.gl*`);
         return [varDir.name, `./${dir.name}/${varDir.name}/${[...expandGlobSync(`./${dir.name}/${varDir.name}/*.gl*`)][0].name}`];
     }));
     const screenfile = [...expandGlobSync(`./${dir.name}/screenshot.*`)][0];
@@ -37,10 +41,10 @@ const BASE_KHRONOS_SAMPLE_URL        = '${BASE_KHRONOS_SAMPLE_URL}';
 const BASE_KHRONOS_SAMPLE_SOURCE_URL = '${BASE_KHRONOS_SAMPLE_SOURCE_URL}';
 const BASE_SAMPLE_SOURCE_URL         = '${BASE_SAMPLE_SOURCE_URL}';
 
-function link(path, root = import.meta.url) { return new URL(path, root).toString(); }
+function link(/** @type {string} */path, root = import.meta.url) { return new URL(path, root).toString(); }
 
 export const index = [
-${khronosSamples.map(({ name, screenshot, source, variants }) =>
+${khronosSamples.map((/** @type {{ name: string, screenshot: string, source: string, variants: Record<string, string> }} */{ name, screenshot, source, variants }) =>
 `    {
         name: '${name}',
         group: 'Khronos',
